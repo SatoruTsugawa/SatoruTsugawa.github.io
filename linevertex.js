@@ -76,11 +76,11 @@ function draw(){
     BY1[i]=Y1[i+1];
   }
   stroke('rgb(0,255,0)');
-  strokeWeight(5); // ü‚Ì‘¾‚³
+  strokeWeight(5); // ç·šã®å¤ªã•
   for (i=0; i<numberofvertex; i++){
     line(originx+X1[i],originy-Y1[i],originx+BX1[i],originy-BY1[i]);
   }
-  strokeWeight(12); // “_‚Ì‘å‚«‚³
+  strokeWeight(12); // ç‚¹ã®å¤§ãã•
   for (i=0; i<=numberofvertex; i++){
     point(originx+X1[i],originy-Y1[i]);
   }
@@ -165,7 +165,7 @@ function startStop() {
   button = createButton('Reset');
   button.position(66, 390);
   button.mousePressed(reset);
-  button = createButton('Calculation(<15sec)');
+  button = createButton('Calculation(<30sec)');
   button.position(126, 390);
   button.mousePressed(calculation);
   button = createButton('Run');
@@ -206,11 +206,11 @@ function startStop() {
       BY1[i]=Y1[i+1];
     }
     stroke('rgb(0,255,0)');
-    strokeWeight(5); // ü‚Ì‘¾‚³
+    strokeWeight(5); // ç·šã®å¤ªã•
     for (i=0; i<numberofvertex; i++){
       line(originx+X1[i],originy-Y1[i],originx+BX1[i],originy-BY1[i]);
     }
-    strokeWeight(12); // “_‚Ì‘å‚«‚³
+    strokeWeight(12); // ç‚¹ã®å¤§ãã•
     for (i=0; i<=numberofvertex; i++){
       point(originx+X1[i],originy-Y1[i]);
     }
@@ -248,7 +248,7 @@ let diameter=0.001; //0.001m=1mm
 let r=0.5*diameter; //radius=0.5mm
 let Gdt=Ldot*dt;
 let le=L0*0.001/Epsilon;
-let rhog=Math.PI*r*r*B0/(le*le*le); //³‚µ‚¢®‚Íl_e=(B*pi*r*r/(rhog))**(1/3)
+let rhog=Math.PI*r*r*B0/(le*le*le); //æ­£ã—ã„å¼ã¯l_e=(B*pi*r*r/(rhog))**(1/3)
 //console.log(rhog);
 
 //Calculation of mechanical equillibrium
