@@ -77,13 +77,22 @@ function draw(){
   }
   stroke('rgb(0,255,0)');
   strokeWeight(5); // 線の太さ
-  for (i=0; i<numberofvertex; i++){
-    line(originx+X1[i],originy-Y1[i],originx+BX1[i],originy-BY1[i]);
-  }
-  strokeWeight(12); // 点の大きさ
-  for (i=0; i<=numberofvertex; i++){
-    point(originx+X1[i],originy-Y1[i]);
-  }
+  noFill();
+  beginShape();
+    curveVertex(originx+X1[0],originy-Y1[0]);
+    for (i=0; i<=numberofvertex; i++){
+    curveVertex(originx+X1[i],originy-Y1[i]);
+    }
+    curveVertex(originx+X1[numberofvertex],originy-Y1[numberofvertex]);
+  endShape();
+  fill(0);
+//  for (i=0; i<numberofvertex; i++){
+//    line(originx+X1[i],originy-Y1[i],originx+BX1[i],originy-BY1[i]);
+//  }
+//  strokeWeight(12); // 点の大きさ
+//  for (i=0; i<=numberofvertex; i++){
+//    point(originx+X1[i],originy-Y1[i]);
+//  }
   stroke(0);
   strokeWeight(0.1);
   //XY axes 
@@ -207,13 +216,22 @@ function startStop() {
     }
     stroke('rgb(0,255,0)');
     strokeWeight(5); // 線の太さ
-    for (i=0; i<numberofvertex; i++){
-      line(originx+X1[i],originy-Y1[i],originx+BX1[i],originy-BY1[i]);
-    }
-    strokeWeight(12); // 点の大きさ
-    for (i=0; i<=numberofvertex; i++){
-      point(originx+X1[i],originy-Y1[i]);
-    }
+    noFill();
+    beginShape();
+      curveVertex(originx+X1[0],originy-Y1[0]);
+      for (i=0; i<=numberofvertex; i++){
+        curveVertex(originx+X1[i],originy-Y1[i]);
+      }
+      curveVertex(originx+X1[numberofvertex],originy-Y1[numberofvertex]);
+    endShape();
+    fill(0);
+//  for (i=0; i<numberofvertex; i++){
+//    line(originx+X1[i],originy-Y1[i],originx+BX1[i],originy-BY1[i]);
+//  }
+//  strokeWeight(12); // 点の大きさ
+//  for (i=0; i<=numberofvertex; i++){
+//    point(originx+X1[i],originy-Y1[i]);
+//  }
     stroke(0);
     strokeWeight(0.1);
     //XY axes 
