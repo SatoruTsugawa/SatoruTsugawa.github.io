@@ -8,7 +8,7 @@ let gamma=14.5;
 let B0=37;
 let Epsilon=0.01;
 let L0=40;
-let Lg=40;
+let Lg=L0;
 let Ldot=1.7;
 let numberofvertex=8;
 let ex=12; //visual expansion
@@ -55,7 +55,7 @@ function draw(){
   gamma=7.0+1.5*slidergamma.value();
   Epsilon=0.01*sliderEPS.value();
   L0=sliderL0.value();
-  Lg=L0-5+sliderLg.value();
+//  Lg=L0-5+sliderLg.value();
   Ldot=0.7+0.2*sliderLdot.value();
 
   background(200);
@@ -145,21 +145,22 @@ function sliderSetting(){
   textL0.style('font-size','20px');
   textTitle.style('font-weight','bold');
 
-  sliderLg= createSlider(0, 5, 5);
-  sliderLg.position(sliderLeftEnd, sliderYposition+kankaku*4);
-  sliderLg.style('width', sliderLength);
-  textLg=createP('Growth zone length Lg');
-  textLg.position(labelLeftEnd,titleYposition+kankaku*4);
-  textLg.style('font-size','20px');
-  textTitle.style('font-weight','bold');
-
   sliderLdot= createSlider(0, 10, 5);
-  sliderLdot.position(sliderLeftEnd, sliderYposition+kankaku*5);
+  sliderLdot.position(sliderLeftEnd, sliderYposition+kankaku*4);
   sliderLdot.style('width', sliderLength);
   textLdot=createP('Growth rate G');
-  textLdot.position(labelLeftEnd,titleYposition+kankaku*5);
+  textLdot.position(labelLeftEnd,titleYposition+kankaku*4);
   textLdot.style('font-size','20px');
   textTitle.style('font-weight','bold');
+
+//  sliderLg= createSlider(0, 5, 5);
+//  sliderLg.position(sliderLeftEnd, sliderYposition+kankaku*5);
+//  sliderLg.style('width', sliderLength);
+//  textLg=createP('Growth zone length Lg');
+//  textLg.position(labelLeftEnd,titleYposition+kankaku*5);
+//  textLg.style('font-size','20px');
+//  textTitle.style('font-weight','bold');
+
 
 }
 
@@ -196,8 +197,8 @@ function startStop() {
     gamma=7.0+1.5*slidergamma.value();
     Epsilon=0.1*sliderEPS.value();
     L0=sliderL0.value();
-    Lg=L0-5+sliderLg.value();
-  Ldot=0.7+0.2*sliderLdot.value();
+//    Lg=L0-5+sliderLg.value();
+    Ldot=0.7+0.2*sliderLdot.value();
     LVMcalculation0();
     background(200);
     strokeWeight(0.1);
