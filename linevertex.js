@@ -108,7 +108,7 @@ function draw(){
 function sliderSetting(){
   let sliderLength='180px';
   let kankaku=25;
-  let sliderLeftEnd=280;
+  let sliderLeftEnd=305;
   let sliderYposition=420;
   let titleYposition=395;
   let labelLeftEnd=50;
