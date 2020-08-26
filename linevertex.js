@@ -171,14 +171,14 @@ function sliderSetting(){
 
 function startStop() {
   noLoop();
-  button = createButton('Reset');
+  button = createButton('1.Reset');
   button.position(66, 390);
   button.mousePressed(reset);
-  button = createButton('Calculation(<30sec)');
-  button.position(126, 390);
+  button = createButton('2.Calculation(10-30sec)');
+  button.position(136, 390);
   button.mousePressed(calculation);
-  button = createButton('Run');
-  button.position(270, 390);
+  button = createButton('3.Run');
+  button.position(300, 390);
   button.mousePressed(start);
 //  button = createButton('Stop');
 //  button.position(310, 390);
