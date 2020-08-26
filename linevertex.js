@@ -76,7 +76,7 @@ function draw(){
     BY1[i]=Y1[i+1];
   }
   stroke('rgb(0,255,0)');
-  strokeWeight(5); // 線の太さ
+  strokeWeight(5); 
   noFill();
   beginShape();
     curveVertex(originx+X1[0],originy-Y1[0]);
@@ -89,7 +89,7 @@ function draw(){
 //  for (i=0; i<numberofvertex; i++){
 //    line(originx+X1[i],originy-Y1[i],originx+BX1[i],originy-BY1[i]);
 //  }
-//  strokeWeight(12); // 点の大きさ
+//  strokeWeight(12); 
 //  for (i=0; i<=numberofvertex; i++){
 //    point(originx+X1[i],originy-Y1[i]);
 //  }
@@ -215,7 +215,7 @@ function startStop() {
       BY1[i]=Y1[i+1];
     }
     stroke('rgb(0,255,0)');
-    strokeWeight(5); // 線の太さ
+    strokeWeight(5); 
     noFill();
     beginShape();
       curveVertex(originx+X1[0],originy-Y1[0]);
@@ -228,7 +228,7 @@ function startStop() {
 //  for (i=0; i<numberofvertex; i++){
 //    line(originx+X1[i],originy-Y1[i],originx+BX1[i],originy-BY1[i]);
 //  }
-//  strokeWeight(12); // 点の大きさ
+//  strokeWeight(12); 
 //  for (i=0; i<=numberofvertex; i++){
 //    point(originx+X1[i],originy-Y1[i]);
 //  }
@@ -266,7 +266,7 @@ let diameter=0.001; //0.001m=1mm
 let r=0.5*diameter; //radius=0.5mm
 let Gdt=Ldot*dt;
 let le=L0*0.001/Epsilon;
-let rhog=Math.PI*r*r*B0/(le*le*le); //正しい式はl_e=(B*pi*r*r/(rhog))**(1/3)
+let rhog=Math.PI*r*r*B0/(le*le*le);
 //console.log(rhog);
 
 //Calculation of mechanical equillibrium
@@ -317,26 +317,21 @@ x[0][0]=0.0;
 y[0][0]=0.0;
 for(i=1;i<=Nm;i++){
 	x[0][i]=i*L0*1.0/(Nm*1.0);
-//	y[0][i]=0.02*Math.sin(0.03*x[0][i]); //to avoid 0 at initial state
-	y[0][i]=0.0; //to avoid 0 at initial state
+	y[0][i]=0.0; 
 	X[0][i]=x[0][i];
 	Y[0][i]=y[0][i];
-//	console.log(m,x[0][i],y[0][i]);
 }
 for(i=0;i<Nm;i++){
 	bx[0][i]=x[0][i+1]-x[0][i];
 	by[0][i]=y[0][i+1]-y[0][i];
 	l[0][i]=L0/(Nm*1.0);
-//	let theta1=Math.atan2(by[0][i]/Math.sqrt(bx[0][i]*bx[0][i]+by[0][i]*by[0][i]),bx[0][i]/Math.sqrt(bx[0][i]*bx[0][i]+by[0][i]*by[0][i]));
 	theta[0][i]=Math.PI/2.0-Math.atan2(by[0][i]/Math.sqrt(bx[0][i]*bx[0][i]+by[0][i]*by[0][i]),bx[0][i]/Math.sqrt(bx[0][i]*bx[0][i]+by[0][i]*by[0][i]));
-//	console.log(i,bx[0][i],l[0][i],theta[0][i],Math.PI/2.0);
 }
 for(i=0;i<Nm-1;i++){
 	kappa[0][i]=(theta[0][i+1]-theta[0][i])/Math.sqrt(bx[0][i]*bx[0][i]+by[0][i]*by[0][i]);
 	kappastar[0][i]=0.0;
 	phi[0][i]=kappa[0][i]*l[0][i];
 	phistar[0][i]=0.0;
-//	console.log(m,i,kappastar[0][i]);
 }
 
 let dis1,dis2,dis3,dis4;
@@ -351,20 +346,16 @@ let Aix,Amix,Bix,Bmix,Aiy,Amiy,Biy,Bmiy;
 		uim1y=by[n][i-1]/Math.sqrt(bx[n][i-1]*bx[n][i-1]+by[n][i-1]*by[n][i-1]);
 		ui1x=bx[n][i]/Math.sqrt(bx[n][i]*bx[n][i]+by[n][i]*by[n][i]);
 		ui1y=by[n][i]/Math.sqrt(bx[n][i]*bx[n][i]+by[n][i]*by[n][i]);
-//		if(n==0)console.log(n,ui1x,ui1y,Math.sqrt(bx[n][i]*bx[n][i]+by[n][i]*by[n][i]),bx[n][i]*bx[n][i],by[n][i]*by[n][i]);
-//		console.log(bx[0][i],by[0][i]);
 		dis1=Math.sqrt(bx[n][i-1]*bx[n][i-1]+by[n][i-1]*by[n][i-1]);
 		dis2=Math.sqrt(bx[n][i]*bx[n][i]+by[n][i]*by[n][i]);
 		Fex[n][i]=-E*((dis1-l[m][i-1])*uim1x-(dis2-l[m][i])*ui1x);
 		Fey[n][i]=-E*((dis1-l[m][i-1])*uim1y-(dis2-l[m][i])*ui1y);
-//		console.log(m,n,i,Fex[n][i],Fey[n][i]);
 	}
 	uim1x=bx[n][Nm-1]/Math.sqrt(bx[n][Nm-1]*bx[n][Nm-1]+by[n][Nm-1]*by[n][Nm-1]);
 	uim1y=by[n][Nm-1]/Math.sqrt(bx[n][Nm-1]*bx[n][Nm-1]+by[n][Nm-1]*by[n][Nm-1]);
 	dis1=Math.sqrt(bx[n][Nm-1]*bx[n][Nm-1]+by[n][Nm-1]*by[n][Nm-1]);
 	Fex[n][Nm]=-E*((dis1-l[m][Nm-1])*uim1x);
 	Fey[n][Nm]=-E*((dis1-l[m][Nm-1])*uim1y);
-//	console.log(m,n,Fex[n][Nm],Fey[n][Nm]);
 
 	//bending force
 	bminx=1.0;
@@ -385,8 +376,6 @@ let Aix,Amix,Bix,Bmix,Aiy,Amiy,Biy,Bmiy;
 	betammia=0.0;
 	dis3=Math.sqrt(bx[n][0]*bx[n][0]+by[n][0]*by[n][0]);
 	dis4=Math.sqrt(bx[n][1]*bx[n][1]+by[n][1]*by[n][1]);
-//	console.log(dis3,dis4);
-//	console.log(n,uim1x,uim1y);
 
 	Aix=(uip1x-ui1x*Math.cos(betai))*aD(betai,betaia)/(dis4);
 	Aiy=(uip1y-ui1y*Math.cos(betai))*aD(betai,betaia)/(dis4);
@@ -397,11 +386,8 @@ let Aix,Amix,Bix,Bmix,Aiy,Amiy,Biy,Bmiy;
 	Bmix=(uimm1x-uim1x*Math.cos(betammi))*aD(betammi,betammia)/Math.sqrt(bminx*bminx+bminy*bminy);
 	Bmiy=(uimm1y-uim1y*Math.cos(betammi))*aD(betammi,betammia)/Math.sqrt(bminx*bminx+bminy*bminy);
 
-//	Fbx[n][1]=-B0*(Aix-Amix+Bix-Bmix);
-//	Fby[n][1]=-B0*(Aiy-Amiy+Biy-Bmiy);
 	Fbx[n][1]=-B0*(Aix-Amix+Bix-Bmix);
 	Fby[n][1]=-B0*(Aiy-Amiy+Biy-Bmiy);
-//	console.log(m,n,Fbx[n][1],Fby[n][1]);
 	for(i=2;i<Nm-1;i++){
 		uimm1x=bx[n][i-2]/Math.sqrt(bx[n][i-2]*bx[n][i-2]+by[n][i-2]*by[n][i-2]);
 		uimm1y=by[n][i-2]/Math.sqrt(bx[n][i-2]*bx[n][i-2]+by[n][i-2]*by[n][i-2]);
@@ -409,7 +395,6 @@ let Aix,Amix,Bix,Bmix,Aiy,Amiy,Biy,Bmiy;
 		uim1y=by[n][i-1]/Math.sqrt(bx[n][i-1]*bx[n][i-1]+by[n][i-1]*by[n][i-1]);
 		ui1x=bx[n][i]/Math.sqrt(bx[n][i]*bx[n][i]+by[n][i]*by[n][i]);
 		ui1y=by[n][i]/Math.sqrt(bx[n][i]*bx[n][i]+by[n][i]*by[n][i]);
-//		console.log(ui1x,ui1y,Math.sqrt(bx[n][i]*bx[n][i]+by[n][i]*by[n][i]),bx[n][i]);
 		uip1x=bx[n][i+1]/Math.sqrt(bx[n][i+1]*bx[n][i+1]+by[n][i+1]*by[n][i+1]);
 		uip1y=by[n][i+1]/Math.sqrt(bx[n][i+1]*bx[n][i+1]+by[n][i+1]*by[n][i+1]);
 		betai=phi[n][i];
@@ -432,8 +417,6 @@ let Aix,Amix,Bix,Bmix,Aiy,Amiy,Biy,Bmiy;
 
 		Fbx[n][i]=-B0*(Aix-Amix+Bix-Bmix);
 		Fby[n][i]=-B0*(Aiy-Amiy+Biy-Bmiy);
-//		if(m==2)console.log(m,n,Fbx[n][i],Fby[n][i],Aix,Amix,Bix,Bmix);
-//		if(m==2)console.log(m,n,uimm1x,uim1x,Math.cos(betammi),aD(betammi,betammia),betammi,betammia,dis3);
 	}
 	uimm1x=bx[n][Nm-3]/Math.sqrt(bx[n][Nm-3]*bx[n][Nm-3]+by[n][Nm-3]*by[n][Nm-3]);
 	uimm1y=by[n][Nm-3]/Math.sqrt(bx[n][Nm-3]*bx[n][Nm-3]+by[n][Nm-3]*by[n][Nm-3]);
@@ -469,12 +452,10 @@ let Aix,Amix,Bix,Bmix,Aiy,Amiy,Biy,Bmiy;
 	Bmiy=(uimm1y-uim1y*Math.cos(betammi))*aD(betammi,betammia)/(dis3);
 	Fbx[n][Nm]=-B0*(-Bmix);
 	Fby[n][Nm]=-B0*(-Bmiy);
-//	console.log(m,n,Fbx[n][Nm],Fby[n][Nm]);
 
 	for(i=1;i<=Nm;i++){
 		Fdx[n][i]=0.0;
 		Fdy[n][i]=-rhog*sqrt(bx[n][i-1]*bx[n][i-1]+by[n][i-1]*by[n][i-1]);
-//		console.log(m,n,Fex[n][i],Fey[n][i],Fbx[n][i],Fby[n][i],Fdx[n][i],Fdy[n][i]);
 	}
 	if(n==0){
 		x[n+1][0]=0.0;
@@ -482,7 +463,6 @@ let Aix,Amix,Bix,Bmix,Aiy,Amiy,Biy,Bmiy;
 		for(i=1;i<=Nm;i++){
 			x[n+1][i]=x[n][i]+(Fex[n][i]+Fbx[n][i]+Fdx[n][i])*dt;
 			y[n+1][i]=y[n][i]+(Fey[n][i]+Fby[n][i]+Fdy[n][i])*dt;
-//			if(m==2)console.log(m,n,x[n+1][i],y[n+1][i],Fex[n][i],Fbx[n][i],Fdy[n][i])
 		}
 	}
 	if(n>0){
@@ -491,25 +471,19 @@ let Aix,Amix,Bix,Bmix,Aiy,Amiy,Biy,Bmiy;
 		for(i=1;i<=Nm;i++){
 			x[n+1][i]=(2.0-eta)*x[n][i]-(1.0-eta)*x[n-1][i]+(Fex[n][i]+Fbx[n][i]+Fdx[n][i])*dt;
 			y[n+1][i]=(2.0-eta)*y[n][i]-(1.0-eta)*y[n-1][i]+(Fey[n][i]+Fby[n][i]+Fdy[n][i])*dt;
-//			if(m==2)console.log(m,n,x[n+1][i],y[n+1][i],Fex[n][i],Fbx[n][i],Fdy[n][i])
 		}
 	}
 	//Renewal of natural length and intrinsic curvature
 	for(i=0;i<Nm;i++){
 		bx[n+1][i]=x[n+1][i+1]-x[n+1][i];
 		by[n+1][i]=y[n+1][i+1]-y[n+1][i];
-//		console.log(bx[n+1][i],by[n+1][i])
 	}
 	let L=0.0;
 	for(i=0;i<Nm;i++){
 		L=L+Math.sqrt(bx[n+1][i]*bx[n+1][i]+by[n+1][i]*by[n+1][i]);
 	}
 	for(i=0;i<Nm;i++){
-//		let theta1=Math.atan2(by[n+1][i]/Math.sqrt(bx[n+1][i]*bx[n+1][i]+by[n+1][i]*by[n+1][i]),bx[n+1][i]/Math.sqrt(bx[n+1][i]*bx[n+1][i]+by[n+1][i]*by[n+1][i]));
-//		if(theta1>0)theta[n+1][i]=Math.PI/2.0-theta1;
-//		if(theta1<0)theta[n+1][i]=Math.PI/2.0-theta1;
 		theta[n+1][i]=Math.PI/2.0-Math.atan2(by[n+1][i]/Math.sqrt(bx[n+1][i]*bx[n+1][i]+by[n+1][i]*by[n+1][i]),bx[n+1][i]/Math.sqrt(bx[n+1][i]*bx[n+1][i]+by[n+1][i]*by[n+1][i]));
-//		console.log(theta[n+1][i]);
 	}
 	for(i=0;i<Nm-1;i++){
 		kappa[n+1][i]=(theta[n+1][i+1]-theta[n+1][i])/Math.sqrt(bx[n+1][i]*bx[n+1][i]+by[n+1][i]*by[n+1][i]);
@@ -517,30 +491,23 @@ let Aix,Amix,Bix,Bmix,Aiy,Amiy,Biy,Bmiy;
 	}
 	if(n==timeMax-1){
 		let z=(int)(Nm*(L-Lg)/L);
-//		console.log(m,n,z,L,Lg);
 		for(i=0;i<Nm;i++){
 			if(i<=z)l[m+1][i]=l[m][i];
 			if(i>z)l[m+1][i]=l[m][i]+Gdt;
-//			console.log(m,l[m+1][i],l[m][i]);
 		}
 		for(i=0;i<Nm-1;i++){
 			if(i<=z){
 				phistar[m+1][i]=0.0;
 				kappastar[m+1][i]=0.0;
-//				phistar[m+1][i]=kappastar[m][i]*l[m][i];
-//				kappastar[m+1][i]=kappastar[m][i];
-//				console.log(m,z,i,phistar[m+1][i],kappastar[m][i],l[m][i]);
 			}
 			if(i>z){
 				kappastar[m+1][i]=kappastar[m][i]+Gdt*(-beta*sin(theta[n+1][i])-gamma*kappa[n+1][i]);
 				phistar[m+1][i]=kappastar[m+1][i]*l[m][i];
-//				console.log(m,z,i,phistar[m+1][i],kappastar[m+1][i],kappastar[m][i],l[m][i]);
 			}
 		}
 		for(i=0;i<=Nm;i++){
 			X[m][i]=x[n+1][i];
 			Y[m][i]=y[n+1][i];
-			console.log(m,n,X[m][i],Y[m][i]);
 		}
 	}
 }//n-end
