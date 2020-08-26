@@ -132,7 +132,7 @@ function sliderSetting(){
   sliderEPS = createSlider(1, 7, 1);
   sliderEPS.position(sliderLeftEnd, sliderYposition+kankaku*2);
   sliderEPS.style('width', sliderLength);
-  textEPS=createP('Elasto-gravi length e');
+  textEPS=createP('Elasto-gravi length &#949(B,g)');
   textEPS.position(labelLeftEnd,titleYposition+kankaku*2);
   textEPS.style('font-size','20px');
   textTitle.style('font-weight','bold');
