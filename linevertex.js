@@ -51,8 +51,8 @@ function setup() {
 }
 
 function draw(){
-  beta=0.5*sliderbeta.value();
-  gamma=7.0+1.5*slidergamma.value();
+  beta=2.0+0.1*sliderbeta.value();
+  gamma=10.0+0.9*slidergamma.value();
   Epsilon=0.01*sliderEPS.value();
   L0=sliderL0.value();
 //  Lg=L0-5+sliderLg.value();
@@ -113,7 +113,7 @@ function sliderSetting(){
   let titleYposition=395;
   let labelLeftEnd=50;
 
-  sliderbeta = createSlider(2, 8, 5);
+  sliderbeta = createSlider(0, 10, 5);
   sliderbeta.position(sliderLeftEnd, sliderYposition);
   sliderbeta.style('width', sliderLength);
   textbeta=createP('Gravi-sensing  &#946');
@@ -129,15 +129,15 @@ function sliderSetting(){
   textgamma.style('font-size','20px');
   textTitle.style('font-weight','bold');
 
-  sliderEPS = createSlider(1, 7, 1);
+  sliderEPS = createSlider(1, 6, 1);
   sliderEPS.position(sliderLeftEnd, sliderYposition+kankaku*2);
   sliderEPS.style('width', sliderLength);
-  textEPS=createP('Elasto-gravi length &#949(g/B)');
+  textEPS=createP('Elasto-gravi length &#949(B,g)');
   textEPS.position(labelLeftEnd,titleYposition+kankaku*2);
   textEPS.style('font-size','20px');
   textTitle.style('font-weight','bold');
 
-  sliderL0= createSlider(25, 55, 40);
+  sliderL0= createSlider(30, 50, 40);
   sliderL0.position(sliderLeftEnd, sliderYposition+kankaku*3);
   sliderL0.style('width', sliderLength);
   textL0=createP('Initial length L0');
@@ -145,7 +145,7 @@ function sliderSetting(){
   textL0.style('font-size','20px');
   textTitle.style('font-weight','bold');
 
-  sliderLdot= createSlider(0, 10, 5);
+  sliderLdot= createSlider(1, 9, 5);
   sliderLdot.position(sliderLeftEnd, sliderYposition+kankaku*4);
   sliderLdot.style('width', sliderLength);
   textLdot=createP('Growth rate G');
@@ -193,8 +193,8 @@ function startStop() {
   function reset() {
     frameCount=0;
     clear();
-    beta=0.5*sliderbeta.value();
-    gamma=7.0+1.5*slidergamma.value();
+    beta=2.0+0.1*sliderbeta.value();
+    gamma=10.0+0.9*slidergamma.value();
     Epsilon=0.1*sliderEPS.value();
     L0=sliderL0.value();
 //    Lg=L0-5+sliderLg.value();
