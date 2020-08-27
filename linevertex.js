@@ -14,6 +14,7 @@ let numberofvertex=8;
 let ex=12; //visual expansion
 let realtimeMax=61;
 let timeMax=40000; //calculation time for mechanical equillibrium
+let m=0;
 
 //Initial arrays
 var X=new Array(realtimeMax);
@@ -102,7 +103,7 @@ function draw(){
     line(originx,0,originx,310);
   }
   if(frameCount==realtimeMax)noLoop();
-}
+;}
 
 //slider-set
 function sliderSetting(){
@@ -164,23 +165,18 @@ function sliderSetting(){
 
 }
 
-//function ButtonSetting(){
-//  button = createButton('calculation!');
-//  button.position(65, 390);
-//  button.mousePressed(calculation);
-//}
-
 function startStop() {
   noLoop();
-  button = createButton('1.Reset');
-  button.position(66, 390);
-  button.mousePressed(reset);
-  button = createButton('2.Calculation(10-30sec)');
-  button.position(136, 390);
-  button.mousePressed(calculation);
-  button = createButton('3.Run');
-  button.position(300, 390);
-  button.mousePressed(start);
+  button1 = createButton('1.Reset');
+  button1.position(66, 390);
+  button1.mousePressed(reset);
+  button2 = createButton('2.Calculation(10-30sec)');
+  button2.position(136, 390);
+  button2.mousePressed(TText);
+  button2.mouseClicked(calculation);
+  button3 = createButton('3.Run');
+  button3.position(300, 390);
+  button3.mousePressed(start);
 //  button = createButton('Stop');
 //  button.position(310, 390);
 //  button.mousePressed(stop);
@@ -256,6 +252,10 @@ function LVMcalculation0(){
   }//i-end
 }
 
+function TText(){
+  textSize(20);
+  text(str('In progess...'), 200, 300);
+}
 
 function LVMcalculation(){
 
