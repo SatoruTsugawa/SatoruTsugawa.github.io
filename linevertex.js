@@ -65,7 +65,7 @@ function setup() {
   textExplain4=createP('Initial length L0: Shoot initial length.');
   textExplain4.position(60,640);
   textExplain4.style('font-size','16px');
-  textExplain4=createP('Growth rate G: Shoot growth rate affecting both gravi-sensing and curvature-sensing.');
+  textExplain4=createP('Growth rate G: Shoot growth rate affecting both bending and straightening.');
   textExplain4.position(60,660);
   textExplain4.style('font-size','16px');
 
