@@ -254,7 +254,7 @@ function LVMcalculation0(){
 
 function TText(){
   textSize(20);
-  text(str('In progess...'), 200, 300);
+  text(str('In progress...'), 195, 300);
 }
 
 function LVMcalculation(){
