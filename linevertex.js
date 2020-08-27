@@ -36,6 +36,39 @@ function setup() {
   textTitle.position(120,-10);
   textTitle.style('font-size','28px');
   textTitle.style('font-weight','bold');
+
+  textUsage0=createP('Usage');
+  textUsage0.position(510,1);
+  textUsage0.style('font-size','14px');
+  textUsage1=createP('1. Click "Reset": Reset new parameters.');
+  textUsage1.position(520,23);
+  textUsage1.style('font-size','14px');
+  textUsage2=createP('2. Click "Calculation": calculate all the mechanical equillibrium till 120 min');
+  textUsage2.position(520,47);
+  textUsage2.style('font-size','14px');
+  textUsage3=createP('3. Click "Run": draw the results');
+  textUsage3.position(520,72);
+  textUsage3.style('font-size','14px');
+
+  textExplain0=createP('Meaning of parameters');
+  textExplain0.position(50,560);
+  textExplain0.style('font-size','16px');
+  textExplain1=createP('Gravi-sensing &#946: bending strength when shoot aligned horizontally, the effect becomes 0 when shoot aligned vertically.');
+  textExplain1.position(60,580);
+  textExplain1.style('font-size','16px');
+  textExplain2=createP('Curvature-sensing &#947: straightening strength when shoot bend.');
+  textExplain2.position(60,600);
+  textExplain2.style('font-size','16px');
+  textExplain3=createP('Elasto-gravi length &#949(g/B): Relative value of the force competition between bending strength and gravity.');
+  textExplain3.position(60,620);
+  textExplain3.style('font-size','16px');
+  textExplain4=createP('Initial length L0: Shoot initial length.');
+  textExplain4.position(60,640);
+  textExplain4.style('font-size','16px');
+  textExplain4=createP('Growth rate G: Shoot growth rate affecting both gravi-sensing and curvature-sensing.');
+  textExplain4.position(60,660);
+  textExplain4.style('font-size','16px');
+
 //  textlabel=createP('=====>>>>>');
 //  textlabel.position(165,370);
 //  textlabel.style('font-size','18px');
