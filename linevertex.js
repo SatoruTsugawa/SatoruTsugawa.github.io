@@ -59,15 +59,37 @@ function setup() {
   textExplain2=createP('Curvature-sensing &#947: straightening strength when shoot bend.');
   textExplain2.position(60,600);
   textExplain2.style('font-size','16px');
-  textExplain3=createP('Elasto-gravi length &#949(g/B): Relative value of the force competition between bending strength and gravity.');
+  textExplain3=createP('Elasto-gravi length &#949(g/B): Relative value of the force competition between bending and gravity.');
   textExplain3.position(60,620);
   textExplain3.style('font-size','16px');
   textExplain4=createP('Initial length L0: Shoot initial length.');
   textExplain4.position(60,640);
   textExplain4.style('font-size','16px');
-  textExplain4=createP('Growth rate G: Shoot growth rate affecting both bending and straightening.');
-  textExplain4.position(60,660);
-  textExplain4.style('font-size','16px');
+  textExplain5=createP('Growth rate G: Shoot growth rate affecting both bending and straightening.');
+  textExplain5.position(60,660);
+  textExplain5.style('font-size','16px');
+
+  textExplain6=createP('&#9734 Inspired by shell simulators in Shigeru Kondo lab. https://www.fbs-osaka-kondolabo.net/simulation-softs');
+  textExplain6.position(50,720);
+  textExplain6.style('font-size','16px');
+  textExplain6.style('font-weight','bold');
+  textExplain7=createP('Link courtesy of Dr. Shigeru Kondo');
+  textExplain7.position(50,745);
+  textExplain7.style('font-size','16px');
+  textExplain7.style('font-weight','bold');
+
+  textExplain8=createP('Reference');
+  textExplain8.position(50,810);
+  textExplain8.style('font-size','14px');
+  textExplain9=createP('1.Bastien R., Douady S. and Moulia B., (2014) A unifying modeling of plant shoot gravitropism with an explicit account of the effects of growth. Front. Plant Sci., 5: 136.');
+  textExplain9.position(60,830);
+  textExplain9.style('font-size','14px');
+  textExplain9=createP('2.Chelakkot R. and Mahadevan L., (2017) On the growth and form of shoots. Interface, 14: 20170001.');
+  textExplain9.position(60,850);
+  textExplain9.style('font-size','14px');
+  textExplain9=createP('3.Agostinelli D., Lucantonio A., and Noselli A., and DeSimone A., (2020) Nutations in growing plant shoots: The role of elastic deformations due to gravity loading, J. Mech. Phys. Solids, 136: 103702');
+  textExplain9.position(60,870);
+  textExplain9.style('font-size','14px');
 
 //  textlabel=createP('=====>>>>>');
 //  textlabel.position(165,370);
