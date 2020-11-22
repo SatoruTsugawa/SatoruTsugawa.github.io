@@ -296,7 +296,7 @@ function startStop() {
   function calculation() {
     LVMcalculation();
     textSize(20);
-    text(str('done!'), 330, 300);
+    text(str('Run!'), 330, 300);
   }
 }
 
