@@ -40,13 +40,13 @@ function setup() {
   textUsage0=createP('Usage');
   textUsage0.position(510,1);
   textUsage0.style('font-size','14px');
-  textUsage1=createP('1. Click "Reset": Reset new parameters.');
+  textUsage1=createP('1. Tune paramters and click "1.Reset": Reset new parameters.');
   textUsage1.position(520,23);
   textUsage1.style('font-size','14px');
-  textUsage2=createP('2. Click "Calculation": calculate all the mechanical equillibrium till 120 min');
+  textUsage2=createP('2. Click "2.Calculation": calculate shoot dynamics taking 10-30 sec');
   textUsage2.position(520,47);
   textUsage2.style('font-size','14px');
-  textUsage3=createP('3. Click "Run": draw the results');
+  textUsage3=createP('3. Click "3.Run": start drawing the results');
   textUsage3.position(520,72);
   textUsage3.style('font-size','14px');
 
