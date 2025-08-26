@@ -80,29 +80,20 @@ function setup() {
   textExplain5.position(60,660);
   textExplain5.style('font-size','16px');
 
-  textExplain6=createP('&#9734 Inspired by shell simulators in Shigeru Kondo lab. https://www.fbs-osaka-kondolabo.net/simulation-softs');
-  textExplain6.position(50,720);
-  textExplain6.style('font-size','16px');
-  textExplain6.style('font-weight','bold');
-  textExplain7=createP('Link courtesy of Dr. Shigeru Kondo');
-  textExplain7.position(50,745);
-  textExplain7.style('font-size','16px');
-  textExplain7.style('font-weight','bold');
-
   textExplain8=createP('Reference');
-  textExplain8.position(50,810);
+  textExplain8.position(50,720);
   textExplain8.style('font-size','14px');
   textExplain9=createP('1.Satoru Tsugawa, Tomohiko G Sano, Hiroyuki Shima, Miyo Terao Morita, Taku Demura, (2020) A mathematical model explores the contributions of bending and stretching forces to shoot gravitropism in Arabidopsis. Quant. Plant Biol., 1, E4, 2020.');
-  textExplain9.position(60,830);
+  textExplain9.position(60,740);
   textExplain9.style('font-size','14px');
   textExplain10=createP('2.Bastien R., Douady S. and Moulia B., (2014) A unifying modeling of plant shoot gravitropism with an explicit account of the effects of growth. Front. Plant Sci., 5: 136.');
-  textExplain10.position(60,850);
+  textExplain10.position(60,770);
   textExplain10.style('font-size','14px');
   textExplain11=createP('3.Chelakkot R. and Mahadevan L., (2017) On the growth and form of shoots. Interface, 14: 20170001.');
-  textExplain11.position(60,870);
+  textExplain11.position(60,790);
   textExplain11.style('font-size','14px');
   textExplain12=createP('4.Agostinelli D., Lucantonio A., and Noselli A., and DeSimone A., (2020) Nutations in growing plant shoots: The role of elastic deformations due to gravity loading, J. Mech. Phys. Solids, 136: 103702');
-  textExplain12.position(60,890);
+  textExplain12.position(60,810);
   textExplain12.style('font-size','14px');
 
 //  textlabel=createP('=====>>>>>');
