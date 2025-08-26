@@ -96,13 +96,13 @@ function setup() {
   textExplain9.position(60,830);
   textExplain9.style('font-size','14px');
   textExplain10=createP('2.Bastien R., Douady S. and Moulia B., (2014) A unifying modeling of plant shoot gravitropism with an explicit account of the effects of growth. Front. Plant Sci., 5: 136.');
-  textExplain10.position(60,830);
+  textExplain10.position(60,850);
   textExplain10.style('font-size','14px');
   textExplain11=createP('3.Chelakkot R. and Mahadevan L., (2017) On the growth and form of shoots. Interface, 14: 20170001.');
-  textExplain11.position(60,850);
+  textExplain11.position(60,870);
   textExplain11.style('font-size','14px');
   textExplain12=createP('4.Agostinelli D., Lucantonio A., and Noselli A., and DeSimone A., (2020) Nutations in growing plant shoots: The role of elastic deformations due to gravity loading, J. Mech. Phys. Solids, 136: 103702');
-  textExplain12.position(60,870);
+  textExplain12.position(60,890);
   textExplain12.style('font-size','14px');
 
 //  textlabel=createP('=====>>>>>');
