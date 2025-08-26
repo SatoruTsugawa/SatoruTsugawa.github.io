@@ -83,7 +83,7 @@ function setup() {
   textExplain8=createP('Reference');
   textExplain8.position(50,720);
   textExplain8.style('font-size','14px');
-  textExplain9=createP('1.Satoru Tsugawa, Tomohiko G Sano, Hiroyuki Shima, Miyo Terao Morita, Taku Demura, (2020) A mathematical model explores the contributions of bending and stretching forces to shoot gravitropism in Arabidopsis. Quant. Plant Biol., 1, E4, 2020.');
+  textExplain9=createP('1.Tsugawa S., Sano TG, Shima H., Morita MT., Demura T., (2020) A mathematical model explores the contributions of bending and stretching forces to shoot gravitropism in Arabidopsis. Quant. Plant Biol., 1, E4, 2020.');
   textExplain9.position(60,740);
   textExplain9.style('font-size','14px');
   textExplain10=createP('2.Bastien R., Douady S. and Moulia B., (2014) A unifying modeling of plant shoot gravitropism with an explicit account of the effects of growth. Front. Plant Sci., 5: 136.');
