@@ -112,7 +112,7 @@ function setup() {
 function draw(){
   beta=2.0+0.1*sliderbeta.value();
   gamma=10.0+0.9*slidergamma.value();
-  Epsilon=0.1*sliderEPS.value();
+  Epsilon=0.02*sliderEPS.value();
   L0=sliderL0.value();
 //  Lg=L0-5+sliderLg.value();
   Ldot=0.7+0.2*sliderLdot.value();
@@ -306,7 +306,7 @@ function startStop() {
     clear();
     beta=2.0+0.1*sliderbeta.value();
     gamma=10.0+0.9*slidergamma.value();
-    Epsilon=0.1*sliderEPS.value();
+    Epsilon=0.02*sliderEPS.value();
     L0=sliderL0.value();
 //    Lg=L0-5+sliderLg.value();
     Ldot=0.7+0.2*sliderLdot.value();
@@ -395,7 +395,7 @@ let diameter=1; //0.001m=1mm
 let r=0.5*diameter; //radius=0.5mm
 let Gdt=Ldot*dt;
 let le=L0/Epsilon;
-let rhog=le*le*le/B0;
+let rhog=B0/(le*le*le);
 //console.log(rhog);
 
 //Calculation of mechanical equillibrium
