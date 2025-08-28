@@ -395,7 +395,7 @@ let diameter=0.001; //0.001m=1mm
 let r=0.5*diameter; //radius=0.5mm
 let Gdt=Ldot*dt;
 let le=L0/Epsilon;
-let rhog=Math.PI*r*r*B0/(le*le*le);
+let rhog=B0/(le*le*le);
 //console.log(rhog);
 
 //Calculation of mechanical equillibrium
