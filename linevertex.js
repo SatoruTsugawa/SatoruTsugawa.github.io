@@ -391,11 +391,11 @@ function LVMcalculation(){
 
 let Nm=numberofvertex;
 let eta=1.0; //friction coeffcient
-let diameter=0.001; //0.001m=1mm
+let diameter=1; //0.001m=1mm
 let r=0.5*diameter; //radius=0.5mm
 let Gdt=Ldot*dt;
 let le=L0/Epsilon;
-let rhog=B0/(le*le*le);
+let rhog=le*le*le/B0;
 //console.log(rhog);
 
 //Calculation of mechanical equillibrium
