@@ -244,7 +244,7 @@ function sliderSetting(){
   textgamma.style('font-size','20px');
   textTitle.style('font-weight','bold');
 
-  sliderEPS = createSlider(1, 4, 2);
+  sliderEPS = createSlider(1, 8, 4);
   sliderEPS.position(sliderLeftEnd, sliderYposition+kankaku*2);
   sliderEPS.style('width', sliderLength);
   textEPS=createP('Elasto-gravi length &#949(g/B)');
