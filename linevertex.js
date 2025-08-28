@@ -112,7 +112,7 @@ function setup() {
 function draw(){
   beta=2.0+0.1*sliderbeta.value();
   gamma=10.0+0.9*slidergamma.value();
-  Epsilon=0.01*sliderEPS.value();
+  Epsilon=0.1*sliderEPS.value();
   L0=sliderL0.value();
 //  Lg=L0-5+sliderLg.value();
   Ldot=0.7+0.2*sliderLdot.value();
