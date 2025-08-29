@@ -43,7 +43,7 @@ for (i=0; i<=realtimeMax; i++){
 
 function setup() {
 
-  textTitle=createP('Line Vertex Model');
+  textTitle=createP('Shoot Vertex Model');
   textTitle.position(120,-10);
   textTitle.style('font-size','28px');
   textTitle.style('font-weight','bold');
